@@ -1,0 +1,79 @@
+object Form1: TForm1
+  Left = 425
+  Height = 439
+  Top = 250
+  Width = 612
+  Caption = 'Jack''s Magic 8-Ball'
+  ClientHeight = 439
+  ClientWidth = 612
+  OnCreate = FormCreate
+  object Shape1: TShape
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 439
+    Top = 0
+    Width = 612
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Brush.Color = clBlack
+    Shape = stCircle
+  end
+  object Shape2: TShape
+    AnchorSideLeft.Control = Shape1
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Shape1
+    Left = 210
+    Height = 193
+    Top = 70
+    Width = 192
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 70
+    Brush.Color = 4134195
+    Pen.Color = clSilver
+    Shape = stCircle
+  end
+  object Shape3: TShape
+    AnchorSideLeft.Control = Shape2
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Shape2
+    Left = 230
+    Height = 137
+    Top = 113
+    Width = 152
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 43
+    Brush.Color = 6695508
+    OnMouseUp = Shape3MouseUp
+    Shape = stTriangleDown
+  end
+  object Label_Message: TLabel
+    AnchorSideLeft.Control = Shape3
+    AnchorSideTop.Control = Shape3
+    AnchorSideRight.Control = Shape3
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Shape3
+    AnchorSideBottom.Side = asrBottom
+    Left = 230
+    Height = 116
+    Top = 134
+    Width = 152
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 21
+    Caption = '---'
+    Font.Color = clCream
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnMouseUp = Label_MessageMouseUp
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 32
+    Top = 32
+  end
+end

@@ -5,4 +5,4 @@ https://youtu.be/sls4a2OuWDc
 
 Just ask a question and click on the triangle in the 8-ball to reveal the answer.
 
-Pre-compiled binaries are in the 8-ball.zip file.
+Pre-compiled binaries for Windows, MacOS & Linux are in the 8-ball.zip file.
